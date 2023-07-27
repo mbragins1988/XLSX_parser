@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{title}}</h1>
+
+<form method="post" action=""  enctype='multipart/form-data'> {% csrf_token %}
+    <div class='form-group'>
+        <input type='file' name='file'>
+    </div>
+    <button type='submit' class='btn btn-primary'>Загрузить файл</button>
+</form>
+{% endblock %}
